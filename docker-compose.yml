@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  front:
+    build:
+      dockerfile: "Dockerfile"
+    volumes:
+      - ./:/app:rw,cached
+    ports:
+      - 3000:3000
