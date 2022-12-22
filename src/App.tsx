@@ -1,18 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import { render } from 'react-dom';
 
-function App() {
+import ExpandingCards from './ExpandingCards';
+import {cardsData} from './dummyData';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          ECO-CHALLENGE
-        </p>
-      </header>
-    </div>
-  );
+      <ExpandingCards data={cardsData} />
+  )
 }
 
 export default App;
