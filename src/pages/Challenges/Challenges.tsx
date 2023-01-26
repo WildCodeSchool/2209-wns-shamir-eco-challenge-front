@@ -1,7 +1,7 @@
 import * as React from "react";
-import ExpandingCards from "../components/ExpandingCards";
-import Navigation from "../components/Navigation";
-import Challenge from "../interfaces/Challenge";
+import ExpandingCards from "../../components/ExpandingCards";
+import Navigation from "../../components/Navigation";
+import Challenge from "../../interfaces/Challenge";
 
 interface Props {
   data: Array<Challenge>;
