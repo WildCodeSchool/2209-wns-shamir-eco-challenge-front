@@ -1,4 +1,14 @@
 import { useState } from "react";
+import { gql, useMutation } from "@apollo/client";
+  
+const CREATE_USER = gql`
+  mutation createUser {
+    createUser {
+      password
+      email
+    }
+  }
+`;
 
 export default function Register() {
   const [username, setUsername] = useState<String>("");
@@ -6,8 +16,16 @@ export default function Register() {
   const [confirmPassword, setConfirmPassword] = useState<String>("");
   const [mail, setMail] = useState<String>("");
 
+  const [addUser, { data, loading, error }] = useMutation(CREATE_USER);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error</p>;
+
+  console.log(data);
+
   const handleClick = (event: any) => {
     event.preventDefault();
+    addUser({ variables: { type: event.target.value } });
     console.log(username, password, confirmPassword, mail);
   };
 

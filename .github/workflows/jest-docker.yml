@@ -1,0 +1,12 @@
+name: jest-docker-ci
+
+on: push
+
+jobs: 
+  test-jest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Launch jest tests
+        run : npm i && npm run test  

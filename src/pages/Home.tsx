@@ -1,9 +1,27 @@
 import * as React from "react";
+import { gql, useQuery } from "@apollo/client";
 import Navigation from "../components/Navigation";
 import Register from "../components/Register";
 import SignIn from "../components/SignIn";
 
+const GET_ALL_USERS = gql`
+  query getAllUsers {
+  getAllUsers {
+    id
+    email
+  }
+}
+`;
+
 export default function Home() {
+
+  const {loading, error, data} = useQuery(GET_ALL_USERS);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error</p>;
+
+  console.log(data);
+
   return (
     <div>
       <Navigation />
