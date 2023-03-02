@@ -1,31 +1,38 @@
 import * as React from "react";
-import { gql, useQuery } from "@apollo/client";
+// import { gql, useQuery } from "@apollo/client";
 import Navigation from "../components/Navigation";
 import Register from "../components/Register";
 import SignIn from "../components/SignIn";
 
-const GET_ALL_USERS = gql`
-  query getAllUsers {
-  getAllUsers {
-    id
-    email
-  }
-}
-`;
+// const GET_ALL_USERS = gql`
+//   query getAllUsers {
+//   getAllUsers {
+//     id
+//     email
+//   }
+// }
+// `;
 
 export default function Home() {
 
-  const {loading, error, data} = useQuery(GET_ALL_USERS);
+  // const {loading, error, data} = useQuery(GET_ALL_USERS);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error</p>;
+  // if (loading) return <p>Loading...</p>;
+  // if (error) return <p>Error</p>;
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <div>
       <Navigation />
-      <p>Home Page !</p>
+      <a
+          className="test"
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Home Page
+        </a>
       <h1>Bienvenue sur "Eco-Challenges" !</h1>
       <p>
         Envie de lancer un challenge à vos amis ? "Nom de l'App" vous permet de
