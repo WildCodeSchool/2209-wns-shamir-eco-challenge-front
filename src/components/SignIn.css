@@ -1,0 +1,68 @@
+body {
+  background-color: #f3f3f3;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"] {
+  background-color: #5ca45c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #3c703c;
+}
+
+/* Ajout d'éléments en rapport avec l'écologie */
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  color: #529e52;
+}
+
+input[type="text"],
+input[type="password"] {
+  background-color: #e2ece2;
+}
+
+button[type="submit"] {
+  background-color: #529e52;
+}
+
+button[type="submit"]:hover {
+  background-color: #3c703c;
+}

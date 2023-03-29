@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./SignIn.css"
 
 export default function SignIn() {
   const [username, setUsername] = useState<String>("");
@@ -19,11 +20,22 @@ export default function SignIn() {
   return (
     <div>
       <form onSubmit={handleClick}>
-        <label>Identifiant</label>
-        <input type="text" name="username" onChange={handleUsername}></input>
+        <label htmlFor="username">Identifiant:</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          onChange={handleUsername}
+        />
 
-        <label>Mot de passe</label>
-        <input type="text" name="password" onChange={handlePassword}></input>
+        <label htmlFor="password">Mot de passe:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          onChange={handlePassword}
+        />
+
         <button type="submit">Se connecter</button>
       </form>
     </div>

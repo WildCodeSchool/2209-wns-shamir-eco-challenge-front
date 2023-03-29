@@ -19,7 +19,7 @@ export default function Challenges({ data }: Props) {
   return (
     <div>
       <Navigation />
-      <p>Challenges Page</p>
+      <p>Challenges Page </p>
       {data.map((challenge) => (
         <div
           key={challenge.id}
