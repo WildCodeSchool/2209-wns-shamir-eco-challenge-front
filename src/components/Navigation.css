@@ -1,0 +1,52 @@
+.navigation-container {
+    top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #529e52;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-link {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation-link:hover {
+  color: #3c703c;
+}
+
+.navigation-container {
+  font-family: "Open Sans", sans-serif;
+}
+
+.navigation-link {
+  margin-right: 10px;
+}
+
+.navigation-link:last-of-type {
+  margin-right: 0;
+}
+
+.navigation-link.active {
+  background-color: #3c703c;
+}
+
+.navigation-link.active:hover {
+  background-color: #529e52;
+}
+
+.navigation-link:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://image.flaticon.com/icons/png/512/124/124021.png");
+  background-size: cover;
+  margin-right: 5px;
+}
