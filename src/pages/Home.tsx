@@ -33,7 +33,7 @@ export default function Home() {
         >
           Home Page
         </a>
-      <h1>Bienvenue sur "Eco-Challenges" !</h1>
+      <h1>Bienvenue sur "Eco-Gestes" !</h1>
       <p>
         Envie de lancer un challenge à vos amis ? "Eco-Challenges" vous permet de
         créer des challenges personnalisés constitués d'éco-gestes à réaliser
