@@ -25,14 +25,10 @@ export default function Home() {
   return (
     <div>
       <Navigation />
-      <a
-          className="test"
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Home Page
-        </a>
+
+     
+      <p>Home Page</p>
+
       <h1>Bienvenue sur "Eco-Gestes" !</h1>
       <p>
         Envie de lancer un challenge à vos amis ? "Eco-Challenges" vous permet de
