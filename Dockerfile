@@ -1,13 +1,13 @@
-FROM node:16
+FROM node:16 AS builder
 
-WORKDIR /app
+    RUN mkdir /app
+    WORKDIR /app
+    COPY package*.json ./
+    RUN npm install
+    COPY tsconfig.json ./
+    COPY public public
+    COPY src src
+    RUN npm run build
 
-COPY package.json ./
-COPY package-lock.json ./
-
-RUN npm install
-
-COPY src ./src
-COPY tsconfig.json ./
-
-CMD ["npm", "start" ]
+FROM nginx:1.21.3
+    COPY --from=builder /app/build /usr/share/nginx/html
