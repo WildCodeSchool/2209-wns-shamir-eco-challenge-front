@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  front:
+    # build:
+    #   dockerfile: "Dockerfile"
+    image: auvnic/project_eco_front
+
+    volumes:
+      - ./:/app:rw,cached
+    ports:
+      - 3000:3000
